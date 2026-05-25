@@ -1,0 +1,4 @@
+{"timestamp": "2026-05-25T12:19:46.109437", "event": "TRADING_HALTED", "reason": "Latency breach detected at 16 ms"}
+{"timestamp": "2026-05-25T12:20:40.565259", "event": "TRADING_HALTED", "reason": "Latency breach detected at 19 ms"}
+{"timestamp": "2026-05-25T12:22:15.029601", "event": "TRADING_HALTED", "reason": "Latency breach detected at 20 ms"}
+{"timestamp": "2026-05-25T12:25:03.083664", "event": "TRADING_HALTED", "reason": "Latency breach detected at 18 ms"}
