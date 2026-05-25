@@ -1,4 +1,5 @@
-Introduction
+# Introduction
+
 High-Frequency Trading, or HFT, is just when companies use powerful computers to trade stocks incredibly fast. These systems process huge amounts of market data every single second, making decisions way faster than a human clerk. The catch is that when things move that quickly, a tiny glitch or a one-second delay can wipe out millions of dollars instantly.
 
 To keep from losing money, trading companies use smart software to watch the market around the clock. It looks at how people are buying and selling and catches any strange behavior before it causes trouble. If something looks wrong, the system can instantly stop all trading to lock down and protect the company's money.
@@ -6,12 +7,14 @@ To keep from losing money, trading companies use smart software to watch the mar
 This project is about creating a Real-Time HFT Order Book Imbalance and Risk Circuit Breaker system using Python.
 The system will process live trading information, calculate key trading indicators, track system delays, and automatically activate a circuit breaker when risky situations are found. The aim is to build a quick, efficient, and dependable monitoring system that works well in real-time financial settings.
 
-Persona
+# Persona
+
 You are a Python developer working at a financial technology company that creates software for high-frequency trading firms. Your job is to build a trading risk engine that can track real-time stock market activity and help stop unexpected losses that might happen because of strange market movements or technical issues.
 
 You need to write neat, well-organized code so the system can handle thousands of market updates every second without slowing down. Because trading needs to be fast and flawless, the software has to be reliable and able to process live information the exact second it comes in.
 
-Context and Role
+# Context and Role
+
 Modern trading platforms get a steady flow of market updates called order book data. This data includes details about buy orders (bids), sell orders (asks), prices, how much of each is available, and when trades happen. The order book changes very quickly, almost every millisecond, as traders add or remove orders.
 
 The trading company wants to create a system that can check this order flow in real time and spot risky situations before they cause problems.
@@ -22,7 +25,8 @@ If the market gets unstable or there are repeated delays, the system should auto
 
 Your job is to build this full system using Python, and make it easy to improve and handle bigger trading volumes in the future.
 
-Objective
+# Objective
+
 The main goal of this project is to create a real-time trading risk engine that can:
 
 Handle live updates from the order book quickly
@@ -36,7 +40,8 @@ Send clear alerts and logs for the monitoring team to see
 
 The system needs to manage fast market updates while keeping the time it takes to process each new data point very low.
 
-Input Data
+# Input Data
+
 The system will get streams of data about orders, either simulated or real-time. Each data entry includes these details: 
 order ID, 
 the time it was sent, 
@@ -55,7 +60,8 @@ and signs of market volatility.
 
 This data keeps the order book up to date, and the system has to handle it right away with no delays.
 
-Data Processing Requirements
+# Data Processing Requirements
+
 The system should check incoming market data first and make sure all needed information is there. If any data is wrong or broken, it should be skipped without causing the app to stop working.
 
 The app should keep an order book in memory that shows bid and ask prices.
@@ -81,7 +87,8 @@ If latency gets too high again and again, it should mark that as a possible tech
 
 The engine should also track rolling averages and check for sudden changes in the market using techniques like Z-score analysis.
 
-Model Requirements
+# Model Requirements
+
 Although this project mainly focuses on streaming systems and risk monitoring, it should also have smart logic to spot unusual market conditions.
 
 The system should:
@@ -100,7 +107,8 @@ The circuit breaker should turn on when:
 
 When the circuit breaker is activated, the system should pause trading and send warning alerts.
 
-Output Requirements
+# Output Requirements
+
 The application should create organized outputs for tracking and analyzing data.
 
 Outputs should include:
@@ -121,7 +129,8 @@ The system should also make reports that are ready for visual display, showing:
 
 All alerts and monitoring results should be able to be exported in JSON format, so they can be used in dashboards or other monitoring tools.
 
-Error Handling and Documentation
+# Error Handling and Documentation
+
 The application needs to have good error handling to stop things from breaking when processing quickly.
 
 The system should handle these situations safely:
@@ -173,7 +182,8 @@ The system's design should be able to grow in the future, so it can handle:
 
 It should also be ready to connect with machine learning tools for better spotting of unusual activity.
 
-Tools and Libraries
+# Tools and Libraries
+
 The project should use these Python libraries:
 
 pandas to handle and work with data
