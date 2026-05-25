@@ -1,18 +1,18 @@
 # Likert Score - 6
 
 # Final Verdict
-Response B is definitely the winner here.
+Response 2 is definitely the winner here.
 
 It feels much more robust, realistic, and production-ready. The design is thoughtfully laid out, the code is clean and easy to follow, and the architecture shows a genuine understanding of how real-world HFT risk systems actually operate.
 
-What really sets B apart is how thoroughly it handles the practical stuff—like managing massive data loads, monitoring system health, spotting anomalies, and tracking latency. Everything connects logically, the data flow makes sense, and the entire blueprint feels like something you could actually hand to a dev team to build.
+What really sets 2 apart is how thoroughly it handles the practical stuff—like managing massive data loads, monitoring system health, spotting anomalies, and tracking latency. Everything connects logically, the data flow makes sense, and the entire blueprint feels like something you could actually hand to a dev team to build.
 
-Another big advantage is that Response B pays a lot of attention to how well the system will perform and how it can grow over time, which is crucial in high-frequency trading environments. The ideas for making things faster, the way the system is tested, and how data is analyzed are all much more refined compared to Response A.
+Another big advantage is that Response 2 pays a lot of attention to how well the system will perform and how it can grow over time, which is crucial in high-frequency trading environments. The ideas for making things faster, the way the system is tested, and how data is analyzed are all much more refined compared to Response 1.
 
-In the end, Response B offers a more professional, technically solid, and complete solution, which makes it the stronger answer.
+In the end, Response 2 offers a more professional, technically solid, and complete solution, which makes it the stronger answer.
 
 # Side-by-Side Analysis Structure:
-| Area | Response A | Response B |
+| Area | Response 1 | Response 2 |
 |---|---|---|
 | Overall Design | The structure is clean and easy to understand. Everything is organized in a simple way. | The design feels more advanced and closer to a real industry-level system. |
 | Code Quality | The code is readable and beginner-friendly. Easy to explain during presentations. | The code is more polished and optimized for larger-scale systems. |
@@ -28,5 +28,5 @@ In the end, Response B offers a more professional, technically solid, and comple
 
 | Response | Strengths | Weaknesses |
 |---|---|---|
-| Response A | Easy to understand and well organized. The code is clean, beginner-friendly, and good for presentations or academic projects. | Some parts feel simpler compared to a real production system. Scalability and advanced optimization ideas are not explored deeply. |
-| Response B | More realistic and production-ready. Stronger focus on performance, scalability, monitoring, and system design. | Slightly harder to understand for beginners. Some sections feel too detailed and technical at times. |
+| Response 1 | Easy to understand and well organized. The code is clean, beginner-friendly, and good for presentations or academic projects. | Some parts feel simpler compared to a real production system. Scalability and advanced optimization ideas are not explored deeply. |
+| Response 2 | More realistic and production-ready. Stronger focus on performance, scalability, monitoring, and system design. | Slightly harder to understand for beginners. Some sections feel too detailed and technical at times. |
