@@ -217,13 +217,14 @@ HFT_RISK_ENGINE/
 
 The project should use these Python libraries:
 
-pandas to handle and work with data
-numpy for doing math and number-based calculations
-collections.deque to manage rolling window operations
-asyncio to handle tasks that run at the same time
-multiprocessing to perform tasks in parallel
-matplotlib or seaborn to create charts and graphs
-json to save structured alerts in a readable format
-logging to track what the application is doing
+- pandas for handling market data
+- numpy for numerical calculations
+- collections.deque for rolling window operations
+- asyncio for asynchronous processing
+- multiprocessing for parallel execution
+- matplotlib for charts and visualizations
+- json for exporting alerts and reports
+- logging for system monitoring and error tracking
+- time and datetime for latency and timestamp handling
 
-Other methods for making things faster and using less memory should be used when needed to improve performance.
+The system should also use efficient in-memory data structures and lightweight processing techniques to maintain low latency and high performance.
