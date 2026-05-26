@@ -227,4 +227,4 @@ The project should use these Python libraries:
 - logging for system monitoring and error tracking
 - time and datetime for latency and timestamp handling
 
-The system should also use efficient in-memory data structures and lightweight processing techniques to maintain low latency and high performance.
+The system should also use smart data structures that work quickly in memory and simple processing methods to keep things fast and efficient.
