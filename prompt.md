@@ -1,8 +1,8 @@
 # Introduction
 
-High-Frequency Trading, or HFT, is just when companies use powerful computers to trade stocks incredibly fast. These systems process huge amounts of market data every single second, making decisions way faster than a human clerk. The catch is that when things move that quickly, a tiny glitch or a one-second delay can wipe out millions of dollars instantly.
+High-Frequency Trading, or HFT, is when companies use fast computers to trade stocks very quickly. These systems look at lots of market information every second and make decisions much quicker than a human can. The problem is, when trades happen so fast, even a small mistake or a delay of just one second can cause huge losses in a matter of moments.
 
-To keep from losing money, trading companies use smart software to watch the market around the clock. It looks at how people are buying and selling and catches any strange behavior before it causes trouble. If something looks wrong, the system can instantly stop all trading to lock down and protect the company's money.
+To avoid heavy losses, trading companies use software that monitors the market constantly. It tracks buying and selling activity in real time and looks for anything unusual that could create problems. If the system detects something suspicious, it can immediately pause trading to help protect the company from major financial risk.
 
 This project is about creating a Real-Time HFT Order Book Imbalance and Risk Circuit Breaker system using Python.
 The system will process live trading information, calculate key trading indicators, track system delays, and automatically activate a circuit breaker when risky situations are found. The aim is to build a quick, efficient, and dependable monitoring system that works well in real-time financial settings.
@@ -59,6 +59,23 @@ and signs of market volatility.
 
 
 This data keeps the order book up to date, and the system has to handle it right away with no delays.
+
+# Input Validation
+
+The system needs to check all the data coming from the market before it starts working with it.
+
+
+The checks should include:
+
+- Making sure all the necessary information is there
+- Confirming that price and quantity are real numbers
+- Ensuring latency values are not negative
+- Checking that order IDs are different for each order
+- Verifying that buy and sell signals are correct
+- Confirming that timestamps are proper
+- Skipping any damaged or missing messages without causing problems
+
+If the system finds bad data, it should record the problem and keep going so the main system doesn’t stop.
 
 # Data Processing Requirements
 
@@ -181,6 +198,20 @@ The system's design should be able to grow in the future, so it can handle:
 - Better risk checking systems
 
 It should also be ready to connect with machine learning tools for better spotting of unusual activity.
+
+# Project Structure
+
+```text
+HFT_RISK_ENGINE/
+│
+├── circuit_breaker.py
+├── engine.py
+├── main.py
+├── metrics.py
+├── order_book.py
+├── requirements.txt
+└── README.md
+```
 
 # Tools and Libraries
 
