@@ -1,147 +1,100 @@
-# Real-Time HFT Order Book Imbalance & Risk Circuit Breaker System
+# Real-Time HFT Order Book Imbalance & Risk Circuit Breaker
 
 ## Project Overview
 
-This project is a benchmark implementation of a real-time High-Frequency Trading (HFT) risk engine built using Python.  
-The system simulates live market activity, maintains an in-memory order book, calculates important trading indicators like Order Book Imbalance (OBI) and rolling VWAP, tracks latency, detects unusual market behavior, and activates a circuit breaker whenever risky conditions are detected.
+This project is a Python-based real-time High-Frequency Trading (HFT) risk engine. It is designed to process streaming market ticks, maintain an in-memory order book, calculate Order Book Imbalance (OBI) and rolling VWAP, monitor latency, detect anomalies, and trigger a circuit breaker when risky conditions appear.
 
-The main goal of the project is to demonstrate how real-time trading risk monitoring systems work in fast-moving financial environments.
+The implementation in `Golden_Response` demonstrates a practical modular design for real-time trading risk monitoring in fast-moving market environments.
 
----
-
-# Repository Structure
+## Project Structure
 
 ```text
-submission/
-│
-├── Response1(ChatGPT)/
-│   ├── analytics/
-│   ├── orderbook/
-│   ├── risk/
-│   ├── visualization/
-│   ├── utils/
-│   ├── main.py
-│   └── requirements.txt
-│
-├── Response2(Gemini)/
-│   ├── order_book.py
-│   ├── metrics.py
-│   ├── circuit_breaker.py
-│   ├── engine.py
-│   └── main.py
-│
-├── prompt.md
-├── justification.md
-└── README.md
-
+ethara_test_25May/
+|
+|-- Golden_Response/
+|   |-- order_book.py
+|   |-- metrics.py
+|   |-- circuit_breaker.py
+|   |-- engine.py
+|   |-- main.py
+|   `-- requirements.txt
+|
+|-- prompt.md
+|-- justification.md
+`-- README.md
 ```
 
-Response1(ChatGPT)/ contains the ChatGPT-generated implementation.
-Response2(Gemini)/ contains the Gemini-generated implementation.
-prompt.md contains the original project prompt.
-justification.md includes the comparison and evaluation between both responses.
+### Module Summary
 
-# Instructions for Running the Code
+- `order_book.py` manages bid and ask levels and computes OBI
+- `metrics.py` tracks rolling VWAP, latency windows, and OBI z-score
+- `circuit_breaker.py` evaluates risk rules and writes halt alerts
+- `engine.py` connects validation, order book logic, metrics tracking, and risk checks
+- `main.py` runs the simulation loop and generates diagnostics output
 
-## 1. Open the Project Folder
+## Libraries
 
-Open a terminal inside the required response folder.
+The golden response uses these libraries:
 
-### Example
+- `numpy`
+- `matplotlib`
+- `pandas`
+- `asyncio`
+- `collections`
+- `logging`
+- `json`
+- `typing`
+- `random`
+- `time`
 
-```bash
-cd Response1(ChatGPT)
+## Prerequisites
+
+To run the project locally, make sure you have:
+
+- Python 3.10 or later
+- `pip`
+- `venv` for creating a virtual environment
+
+## How to Run Locally
+
+### 1. Move into the implementation folder
+
+```powershell
+cd ethara_test_25May\Golden_Response
 ```
 
-or
+### 2. Create a virtual environment
 
-```bash
-cd Response2(Gemini)
-```
-
----
-
-## 2. Create a Virtual Environment
-
-```bash
+```powershell
 python -m venv .venv
 ```
 
-### Activate It
-
-#### Windows PowerShell
+### 3. Activate the virtual environment
 
 ```powershell
 .venv\Scripts\Activate.ps1
 ```
 
-#### Windows CMD
+### 4. Install dependencies
 
-```cmd
-.venv\Scripts\activate
-```
-
----
-
-## 3. Install Dependencies
-
-```bash
+```powershell
 pip install -r requirements.txt
 ```
 
-If `requirements.txt` is not available, install manually:
+### 5. Run the project
 
-```bash
-pip install numpy pandas matplotlib seaborn
-```
-
----
-
-## 4. Run the Project
-
-```bash
+```powershell
 python main.py
 ```
 
----
+## Expected Output
 
-# Expected Output
+When you run the project, it should:
 
-The system will:
-
-- Simulate live market data
-- Calculate OBI and VWAP values
-- Monitor latency
-- Detect anomalies
-- Trigger circuit breaker alerts
-- Print monitoring logs in the console
-- Generate visualization charts
-
-Some implementations may also:
-- Export JSON alert files
-- Generate analytics graphs
-
----
-
-# Evaluation Methodology
-
-The project responses were evaluated using a side-by-side comparison approach.
-
-## Evaluation Criteria
-
-The evaluation mainly focused on:
-
-- Correctness of implementation
-- Code quality and readability
-- Real-time processing logic
-- Risk detection handling
-- Scalability and performance ideas
-- Error handling
-- Visualization and reporting
-- Overall practicality and production readiness
-
----
-
-# Comparison Summary
-
-Both responses were compared based on how realistically and effectively they solved the original HFT risk engine problem.
+- simulate market ticks
+- calculate OBI and rolling VWAP values
+- monitor latency
+- trigger circuit breaker alerts when thresholds are breached
+- print logs in the terminal
+- create `risk_alerts.json`
+- generate `hft_risk_engine_diagnostics.png`
